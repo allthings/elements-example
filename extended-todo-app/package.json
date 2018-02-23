@@ -1,0 +1,56 @@
+{
+  "name": "elements-example",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "enzyme": "^3.2.0",
+    "jest-cli": "^21.2.1",
+    "prettier": "^1.9.2",
+    "react-scripts": "1.0.14"
+  },
+  "dependencies": {
+    "@allthings/colors": "^3.2.0",
+    "@allthings/elements": "^1.9.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "enzyme-to-json": "^3.3.0",
+    "jest": "^21.2.1",
+    "jest-fetch-mock": "^1.4.0",
+    "jest-glamor-react": "^3.2.2",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "jest src/",
+    "eject": "react-scripts eject"
+  },
+  "jest": {
+    "setupFiles": [
+      "raf/polyfill",
+      "./bootstrap-jest.js"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>/test-setup.js",
+    "transformIgnorePatterns": [
+      "node_modules/(?!react|@expo|expo)"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },
+  "prettier": {
+    "eslintIntegration": true,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "semi": false,
+    "useTabs": false,
+    "jsonEnable": []
+  }
+}

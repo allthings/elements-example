@@ -1,11 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Checkmark from '@allthings/elements/molecules/Checkmark'
-import { ListItem } from '@allthings/elements/molecules/List'
-import Text from '@allthings/elements/atoms/Text'
-import Inset from '@allthings/elements/atoms/Inset'
+import { Checkmark, ListItem, Text, Inset } from '@allthings/elements'
 
-class TodoItem extends React.Component {
+class TodoListItem extends React.Component {
   static propTypes = {
     id: PropTypes.number.isRequired,
     children: PropTypes.string.isRequired,
@@ -26,4 +23,4 @@ class TodoItem extends React.Component {
   }
 }
 
-export default TodoItem
+export default TodoListItem

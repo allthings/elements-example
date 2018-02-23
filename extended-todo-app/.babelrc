@@ -1,0 +1,34 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": [
+          "Chrome >= 40",
+          "FireFox >= 44",
+          "Safari >= 7",
+          "Explorer 10",
+          "last 4 Edge versions"
+        ]
+      },
+      "useBuiltIns": true
+    }],
+    "react",
+    "es2015",
+    "stage-0"
+  ],
+   "env": {
+     "docs": {
+       "plugins": [
+         "add-react-displayname",
+         [
+           "babel-plugin-react-docgen",
+           {
+             "DOC_GEN_COLLECTION_NAME": "REACT_DOCS"
+           }
+         ]
+       ]
+     }
+   },
+}
+
+

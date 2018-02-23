@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoItem it should match snapshot 1`] = `
+<div
+  data-css-h0biv2=""
+>
+  <ListItem
+    backgroundColor="white"
+    data-css-zh5k6q=""
+    padded={true}
+  >
+    <div
+      data-css-154b89o=""
+    >
+      <_class
+        checked={true}
+        data-css-13isb4y=""
+        data-css-p2i0ep=""
+        id="checkmark0"
+        onClick={[Function]}
+      />
+      <div
+        className="touch"
+        data-css-leaz66=""
+        onDoubleClick={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <Text
+          autoBreak={true}
+          block={true}
+          color="text"
+          data-css-93utwa=""
+          id={0}
+          size="l"
+        >
+          Some Text
+        </Text>
+      </div>
+    </div>
+    <div
+      className="icon-div main-icon-div"
+      data-css-1r5myjm=""
+      style={
+        Object {
+          "transitionDelay": "",
+          "width": 0,
+        }
+      }
+    >
+      <div
+        className="icon-div"
+        data-css-b7lh05=""
+      >
+        <div
+          className="icon-div"
+          data-css-1nax9fv=""
+          data-css-pmoomt=""
+          style={
+            Object {
+              "right": -70,
+            }
+          }
+        >
+          <Icon
+            className="icon-div edit-icon"
+            color="white"
+            data-css-fvks2t=""
+            name="edit"
+            onClick={[Function]}
+            size="m"
+            style={
+              Object {
+                "right": -70,
+              }
+            }
+          />
+        </div>
+      </div>
+      <div
+        className="icon-div"
+        data-css-b7lh05=""
+      >
+        <div
+          className="icon-div"
+          data-css-1nax9fv=""
+          data-css-83ugar=""
+          style={
+            Object {
+              "right": -70,
+            }
+          }
+        >
+          <Icon
+            className="icon-div remove-icon"
+            color="white"
+            data-css-fvks2t=""
+            name="remove-light-filled"
+            onClick={[Function]}
+            size="m"
+            style={
+              Object {
+                "right": -70,
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </ListItem>
+</div>
+`;

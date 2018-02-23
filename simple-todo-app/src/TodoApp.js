@@ -1,11 +1,6 @@
 import React, { Component } from 'react'
 import { ColorPalette } from '@allthings/colors'
-import Card from '@allthings/elements/molecules/Card'
-import { List } from '@allthings/elements/molecules/List'
-import Inset from '@allthings/elements/atoms/Inset'
-import TitleBar from '@allthings/elements/organisms/TitleBar'
-import Text from '@allthings/elements/atoms/Text'
-import ThemeProvider from '@allthings/elements/behaviour/ThemeProvider'
+import { Card, List, Inset, ResourceProvider, TitleBar, Text, ThemeProvider } from '@allthings/elements'
 import TodoItem from './TodoItem'
 
 const DemoTheme = {
@@ -46,11 +41,11 @@ class App extends Component {
     return (
       <div className="App">
         <ThemeProvider theme={DemoTheme}>
-          <div>
+          <ResourceProvider>
             <TitleBar>
               <Inset>
-                <Text size="m" color="contrast">
-                  Todo
+                <Text strong color="white">
+                  Todos
                 </Text>
               </Inset>
             </TitleBar>
@@ -67,7 +62,7 @@ class App extends Component {
                 ))}
               </List>
             </Card>
-          </div>
+          </ResourceProvider>
         </ThemeProvider>
       </div>
     )

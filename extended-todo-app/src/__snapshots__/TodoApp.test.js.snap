@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoApp should match snapshot (no buttons clicked) 1`] = `
+<div
+  className="App"
+>
+  <ResourceProvider
+    resourcePath="https://static.allthings.me"
+  >
+    <ThemeProvider
+      theme={
+        Object {
+          "background": "#f3f5f7",
+          "contrast": "#ffffff",
+          "disabled": "#95a5a5",
+          "primary": "#e84c3d",
+          "secondaryText": "#333333",
+          "text": "#333333",
+          "titleColor": "#333333",
+        }
+      }
+    >
+      <View
+        alignH="start"
+        alignV="stretch"
+        fill={false}
+        flex="none"
+        onRef={[Function]}
+      >
+        <TitleBar
+          data-css-bh3vuo=""
+        >
+          <Inset
+            data-css-14z3si=""
+            horizontal={true}
+          >
+            <Icon
+              color="white"
+              data-css-xih1gx=""
+              name="book-open"
+              size="m"
+            />
+            <Text
+              block={true}
+              color="contrast"
+              data-css-1y7q7mp=""
+              size="l"
+            >
+              My Todos
+            </Text>
+          </Inset>
+          <Icon
+            color="#FFFFFF"
+            data-css-1eqigeq=""
+            name="plus-light"
+            onClick={[Function]}
+            size="m"
+          />
+        </TitleBar>
+        <Card>
+          <div
+            data-css-l09ulh=""
+          >
+            <div
+              data-css-r9ebme=""
+            >
+              <TextInput
+                data-css-r9ebme=""
+                id="new"
+                lines={1}
+                name="new"
+                onChange={[Function]}
+                onKeyUp={[Function]}
+                placeholder="Add new"
+                required={false}
+                type="text"
+                value="testing"
+              />
+            </div>
+            <_class
+              data-css-1bn1z22=""
+              disabled={true}
+              id="add-task"
+              onClick={[Function]}
+            >
+              add
+            </_class>
+          </div>
+          <div
+            data-css-1yv2jt6=""
+          >
+            <_class
+              backgroundColor="rgba(232, 76, 61, 0.5)"
+              className="all"
+              data-css-pg4ma5=""
+              onClick={[Function]}
+            >
+              <span
+                className="all"
+              >
+                All
+              </span>
+            </_class>
+            <_class
+              backgroundColor="rgba(232, 76, 61, 0.5)"
+              className="incomplete"
+              data-css-pg4ma5=""
+              onClick={[Function]}
+            >
+              <span
+                className="incomplete"
+              >
+                Incomplete (1)
+              </span>
+            </_class>
+            <_class
+              backgroundColor=""
+              className="completed"
+              data-css-pg4ma5=""
+              id="completed-button"
+              onClick={[Function]}
+            >
+              <span
+                className="completed"
+              >
+                Completed
+              </span>
+            </_class>
+          </div>
+          <GroupedCardList>
+            <TodoItem
+              checkmarkClicked={[Function]}
+              done={true}
+              doneEditting={[Function]}
+              handleRemove={[Function]}
+              id={1}
+              key="checkbox1"
+              onDoubleClick={[Function]}
+              onSlideLeft={[Function]}
+            >
+              Text 2
+            </TodoItem>
+            <TodoItem
+              checkmarkClicked={[Function]}
+              done={true}
+              doneEditting={[Function]}
+              handleRemove={[Function]}
+              id={2}
+              key="checkbox2"
+              onDoubleClick={[Function]}
+              onSlideLeft={[Function]}
+            >
+              Text 3
+            </TodoItem>
+          </GroupedCardList>
+        </Card>
+      </View>
+    </ThemeProvider>
+  </ResourceProvider>
+</div>
+`;
