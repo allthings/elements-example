@@ -1,6 +1,6 @@
 # 2 Column responsive layout
 
-This is a very simple ToDo Microapp which demonstrates the use of the HorizontalView based on [@allthings/elements](https://github.com/allthings/elements/blob/master/src/behaviour/HorizontalView.jsx)
+This is a very simple ToDo Microapp which demonstrates the use of the HorizontalView combined with a responsive 2-Column layout based on [@allthings/elements](https://github.com/allthings/elements/blob/master/src/behaviour/HorizontalView.jsx)
 
 > Are you looking for elements documentation? [You can find it here](https://developers.allthings.me/elements/reference/behaviour/horizontalView.html).
 
