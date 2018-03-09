@@ -1,4 +1,4 @@
-# Horizontal View
+# 2 Column responsive layout
 
 This is a very simple ToDo Microapp which demonstrates the use of the HorizontalView based on [@allthings/elements](https://github.com/allthings/elements/blob/master/src/behaviour/HorizontalView.jsx)
 
@@ -10,7 +10,7 @@ Clone the project using git
 
 `git clone git@github.com:allthings/elements-example.git`
 
-`cd horizontal-view` and run it using
+`cd two-column-responsive-layout` and run it using
 
 `yarn start`
 
