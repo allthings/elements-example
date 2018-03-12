@@ -6,7 +6,7 @@ class TodoListItem extends React.Component {
   static propTypes = {
     id: PropTypes.number.isRequired,
     children: PropTypes.string.isRequired,
-    done: PropTypes.bool.isRequired
+    done: PropTypes.bool.isRequired,
   }
 
   handleClick = () => this.props.onClick(this.props.id)

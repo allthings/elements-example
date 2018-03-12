@@ -1,7 +1,13 @@
 import React, { Component } from 'react'
-import { withRouter } from "react-router-dom"
+import { withRouter } from 'react-router-dom'
 import { ColorPalette } from '@allthings/colors'
-import { Card, List, Inset, SquareIconButton, TitleBar, Text, ThemeProvider } from '@allthings/elements'
+import {
+  Card,
+  List,
+  SquareIconButton,
+  TitleBar,
+  Text,
+} from '@allthings/elements'
 import TodoListItem from './TodoListItem'
 
 class TodoList extends Component {
@@ -9,8 +15,8 @@ class TodoList extends Component {
     todos: [
       { id: 1, text: 'Search for cocktail recipes for the party', done: false },
       { id: 2, text: 'Create nice invitation cards', done: false },
-      { id: 3, text: 'Ask some people to bring some finger food', done: false }
-    ]
+      { id: 3, text: 'Ask some people to bring some finger food', done: false },
+    ],
   }
 
   handleClick = id => {
@@ -19,12 +25,12 @@ class TodoList extends Component {
         if (todo.id === id) {
           return {
             ...todo,
-            done: !todo.done
+            done: !todo.done,
           }
         } else {
           return todo
         }
-      })
+      }),
     }))
   }
 
@@ -52,6 +58,7 @@ class TodoList extends Component {
                 onClick={this.handleClick}
                 id={todo.id}
                 done={todo.done}
+                key={todo.id}
               >
                 {todo.text}
               </TodoListItem>

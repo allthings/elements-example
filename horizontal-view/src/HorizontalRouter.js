@@ -1,9 +1,6 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { Route } from "react-router"
-import HorizontalView from "@allthings/elements/behaviour/HorizontalView"
-import { View } from "@allthings/elements"
-import { matchPath, withRouter } from "react-router"
+import React from 'react'
+import HorizontalView from '@allthings/elements/behaviour/HorizontalView'
+import { matchPath, withRouter } from 'react-router'
 
 class HorizontalRouter extends React.Component {
   getMatchingRoutes(props) {
@@ -11,7 +8,7 @@ class HorizontalRouter extends React.Component {
       const match = matchPath(props.location.pathname, route)
       if (match) {
         const routeWithProps = Object.assign(route, {
-          props: { match, location: props.location, history: props.history }
+          props: { match, location: props.location, history: props.history },
         })
         acc.push(routeWithProps)
       }
@@ -23,7 +20,7 @@ class HorizontalRouter extends React.Component {
     return (
       <HorizontalView>
         {this.getMatchingRoutes(this.props).map(route => (
-          <route.component {...route.props} id={route.path} />
+          <route.component {...route.props} key="route.path" id={route.path} />
         ))}
       </HorizontalView>
     )
