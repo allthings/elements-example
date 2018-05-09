@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { ColorPalette } from '@allthings/colors'
+import { hot } from 'react-hot-loader'
 import { ResourceProvider, ThemeProvider } from '@allthings/elements'
 import HorizontalRouter from './HorizontalRouter'
 import TodoGroups from './TodoGroups'
@@ -19,7 +20,7 @@ const DemoTheme = {
 const ToDoGroups = ({ match }) => <TodoGroups />
 const ToDoList = ({ match }) => <TodoList />
 
-export default class App extends React.Component {
+class App extends React.Component {
   render() {
     return (
       <ThemeProvider theme={DemoTheme}>
@@ -37,3 +38,5 @@ export default class App extends React.Component {
     )
   }
 }
+
+export default hot(module)(App)
