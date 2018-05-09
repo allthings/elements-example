@@ -38,7 +38,7 @@ describe('TodoItem buttons', () => {
     ],
     filter: 'all',
     textDisable: true,
-    newText: '',
+    text: '',
   })
 
   it('should set done = false if checkmark clicked', () => {

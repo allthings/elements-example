@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, createRef } from 'react'
 import { ColorPalette } from '@allthings/colors'
 import Icon from '@allthings/elements/atoms/Icon'
 import Inset from '@allthings/elements/atoms/Inset'
@@ -99,11 +99,14 @@ class App extends Component {
     ],
     filter: 'all',
     textDisable: true,
-    newText: '',
+    text: '',
   }
 
+  input = createRef()
+
   updateInput = event => {
-    this.setState({ newText: this.textInput.input.value })
+    const text = event.target.value
+    this.setState({ text, textDisable: text.length === 0 })
   }
 
   componentDidMount = () => {
@@ -125,7 +128,7 @@ class App extends Component {
 
   handleSliding = (id, type) => {
     const newTodo = [...this.state.todos]
-    newTodo[id].iconOpen = type === 'open' ? true : false
+    newTodo[id].iconOpen = type === 'open'
     this.setState({ todos: newTodo })
   }
 
@@ -135,45 +138,24 @@ class App extends Component {
     this.setState({ todos: newTodo })
   }
 
-  handleKeyPress = event => {
-    const text = event.target.value
-    if (event.key === 'Enter' && text) {
-      this.addTodo()
-    } else {
-      const textExists = this.textInput.input.value
-      if (textExists && this.state.textDisable) {
-        this.setState({ textDisable: false })
-      } else if (!textExists && !this.state.textDisable) {
-        this.setState({ textDisable: true })
-      }
-    }
-  }
-
-  addTodo = () => {
-    const text = this.textInput.input.value
-    this.setState({
+  addTodo = () =>
+    this.setState(state => ({
       todos: [
-        ...this.state.todos,
+        ...state.todos,
         {
-          text,
+          text: state.text,
           done: false,
           doubleClicked: false,
           checkmark: 'flex',
           iconOpen: false,
         },
       ],
+      text: '',
       textDisable: true,
-    })
-    this.setState({ newText: '' })
-    this.textInput.input.blur()
-  }
+    }))
 
   changeFilter = ({ target: { className } }) => {
     this.setState({ filter: className })
-  }
-
-  focusInput = () => {
-    this.textInput.input.focus()
   }
 
   doneEditting = (event, id) => {
@@ -255,7 +237,6 @@ class App extends Component {
                   name="plus-light"
                   size="m"
                   color="#FFFFFF"
-                  onClick={this.focusInput}
                   {...styles.create}
                 />
               </TitleBar>
@@ -265,11 +246,10 @@ class App extends Component {
                     <TextInput
                       id="new"
                       name="new"
-                      ref={node => (this.textInput = node)}
+                      ref={this.input}
                       placeholder="Add new"
-                      value={this.state.newText}
-                      onKeyUp={this.handleKeyPress}
-                      onChange={this.updateInput.bind(this)}
+                      value={this.state.text}
+                      onChange={this.updateInput}
                       {...styles.textInput}
                     />
                   </div>

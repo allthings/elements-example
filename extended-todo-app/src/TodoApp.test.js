@@ -11,7 +11,7 @@ describe('TodoApp', () => {
       { text: 'Text 3', done: true },
     ],
     filter: 'completed',
-    newText: 'testing',
+    text: 'testing',
   })
   it('should match snapshot (no buttons clicked)', () => {
     expect(wrapper).toMatchSnapshot()
@@ -39,7 +39,7 @@ describe('TodoApp buttons', () => {
     ],
     filter: 'all',
     textDisable: false,
-    newText: 'Text 4',
+    text: 'Text 4',
   })
 
   it('add button should add one TodoItem with correct text and #new TextInput value is cleared', () => {
