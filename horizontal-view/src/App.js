@@ -6,6 +6,7 @@ import { ResourceProvider, ThemeProvider } from '@allthings/elements'
 import HorizontalRouter from './HorizontalRouter'
 import TodoGroups from './TodoGroups'
 import TodoList from './TodoList'
+import 'cross-fetch/polyfill'
 
 const DemoTheme = {
   primary: ColorPalette.red,
